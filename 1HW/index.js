@@ -14,9 +14,9 @@ document.write(x +"<br/>");
 3)Додаємо результат x += y - x++ * z означає, що x стає 6 + (-10) = -4.
 */
 
-var x = 6
-var y = 14
-var z =4 
+x = 6
+y = 14
+z =4 
 
 z = --x - y * 5 ;
 document.write(z +"<br/>");
@@ -28,9 +28,9 @@ document.write(z +"<br/>");
 */
 
 
-var x = 6
-var y = 14
-var z =4 
+x = 6
+y = 14
+z =4  
 
 y /= x + 5 % z; 
 document.write(y +"<br/>");
@@ -41,9 +41,9 @@ document.write(y +"<br/>");
 3)y стає 14 / 7 = 2.
 */
 
-var x = 6
-var y = 14
-var z =4 
+x = 6
+y = 14
+z =4 
 
 result = z - x++ + y * 5;
 document.write(result +"<br/>");
@@ -56,9 +56,9 @@ document.write(result +"<br/>");
 result дорівнює 70 - 2 = 68.
 */
 
-var x = 6
-var y = 14
-var z =4 
+x = 6
+y = 14
+z =4 
 
 x = y - x++ * z;
 document.write(x +"<br/>");
