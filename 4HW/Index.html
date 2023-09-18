@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картки користувачів</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Картки користувачів</h1>
+    </header>
+    <main>
+        <section class="user-form">
+            <h2>Створити користувача</h2>
+            <div class="input-group">
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" placeholder="Арсен">
+            </div>
+            <div class="input-group">
+                <label for="surname">Прізвище:</label>
+                <input type="text" id="surname" placeholder="Пілянський">
+            </div>
+            <div class="input-group">
+                <label for="age">Вік:</label>
+                <input type="text" id="age" placeholder="20">
+            </div>
+            <div class="input-group">
+                <label for="telephone">Телефон:</label>
+                <input type="text" id="telephone" placeholder="+380(957782811)">
+            </div>
+            <div class="input-group">
+                <label for="mail" >Електронна пошта:</label>
+                <input type="email" id="mail" placeholder="kart@example.com">
+            </div>
+            <div class="input-group">
+                <label for="linkIMG">Посилання на фото (URL):</label>
+                <input type="url" id="linkIMG" placeholder="https://www.example.com/kart.jpg">
+            </div>
+            <button id="btn">Додати картку</button>
+        </section>
+        <section id="user-cards">
+  
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <img src="img/2.gif" alt="Зображення сайдбара">
+    </aside>
+    <script src="Index.js"></script>
+</body>
+</html>
