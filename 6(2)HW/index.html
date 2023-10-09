@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Об'єкт Human з методом</title>
+</head>
+<body>
+  <script>
+    function Human(name = "Ім'я", surname = 'Прізвище', age = 30, color = "червоний") {
+      this.name = name;
+      this.surname = surname;
+      this.age = age;
+      this.favColor = color;
+
+      this.introduce = function () {
+        return `Ahoy! Я ${this.name} ${this.surname}, відомий в узорних ${this.age} роках, і моя улюблена барвиста гамма - ${this.favColor}.`;
+      };
+    }
+
+    Human.planet = "Планета Марс"; // Статична властивість
+
+    Human.info = function () { // Статичний метод
+      return `Сутність, відома як людина, - це інтелектуальна біопідсистема, заселена у галактичному регіоні. Місце існування - ${Human.planet}`;
+    };
+
+    console.log(Human.info());
+
+    const firstHuman = new Human();
+    console.log(firstHuman.introduce());
+
+    const secondHuman = new Human("Ivan", "Ivanov", 25, "зелений");
+    console.log(secondHuman.introduce());
+  </script>
+</body>
+</html>

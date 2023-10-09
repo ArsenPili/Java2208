@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Сортування об'єктів Human</title>
+</head>
+<body>
+  <script>
+    function Human(age) {
+      this.age = age;
+    }
+
+    function sortHumans(humans, order) {
+      return humans.sort((a, b) => {
+        if (order === 'asc') {
+          return a.age - b.age;
+        } else if (order === 'desc') {
+          return b.age - a.age;
+        } else {
+          throw new Error('Невірний порядок сортування');
+        }
+      });
+    }
+
+    function randomHumansArray() {
+      let humansArray = [];
+      const randomCount = Math.floor(Math.random() * 8 + 2);
+      for (let i = 0; i < randomCount; i++) {
+        let randomAge = Math.floor(Math.random() * 100 + 1);
+        humansArray.push(new Human(randomAge));
+      }
+      return humansArray;
+    }
+
+    const objArray = randomHumansArray();
+
+    console.log('від меншого до більшого:');
+    console.log(sortHumans(objArray, 'asc'));
+    console.log('від більшого до меншого:');
+    console.log(sortHumans(objArray, 'desc'));
+  </script>
+</body>
+</html>
