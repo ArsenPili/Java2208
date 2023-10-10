@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Работа с узлами DOM - Свойства</title>
+
+    <script>
+
+        // Основные типы узлов
+        // Интерфейс           | Константа nodeType            | Значение nodeType
+        // ------------------------------------------------------------------------
+        // Element             | Node.ELEMENT_NODE             | 1
+        // Text                | Node.TEXT_NODE                | 3
+        // Comment             | Node.COMMENT_NODE             | 8
+        // Document            | Node.DOCUMENT_NODE            | 9
+        // ------------------------------------------------------------------------
+
+        // Свойства для навигации по DOM
+
+        // childNodes - массив всех дочерних узлов
+        // firstChild - первый дочерний узел
+        // firstElementChild - 
+        // children - Все дочерние элементы
+        // lastChild - последний дочерний узел
+        // nextSibling - следующий узел расположенный на одном уровне с текущим
+        // previousSibling - предыдущий узел расположенный на одном уровне с текущим
+        // parentNode - родительский узел для текущего элемента
+    </script>
+</head>
+
+<body>
+   
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+   <script>
+      const [...ul] = document.querySelector("ul").children;
+       ul.forEach((el)=>{
+          el.style.color = "red"
+          console.dir(el)
+       })
+   </script>
+</body>
+
+</html>
