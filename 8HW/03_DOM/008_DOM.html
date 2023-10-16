@@ -1,46 +1,30 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
     <title>Работа з вузлами DOM</title>
-    <style>
-        .select {
-            color: tomato;
-        }
-
-        .black {
-            color: black;
-        }
-
-        input {
-            width: 200px;
-            padding: .5rem;
-            margin-bottom: .5rem;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-
 <body>
-    <!--https://developer.mozilla.org/ru/docs/Web/API/Element/outerHTML-->
-    <ul id="list">
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <li>List Item 4</li>
-        <li>List Item 5</li>
-    </ul>
-    <br />
-    <input type="button" value="Выбрать первый элемент" /><br />
-    <input type="button" value="Выбрать последний элемент" /><br />
-    <input type="button" value="Выбрать следующий элемент" /><br />
-    <input type="button" value="Выбрать предыдущий элемент" /><br />
-    <input type="button" value="Добавить элемент в кінець" /><br />
-    <input type="button" value="Удалить элемент з початку" /><br />
-    <input type="button" value="Удалить элемент з кінця" /><br />
-    <input type="button" value="Удалить элемент з середини" /><br />
-    <input type="button" value="Добавить  в начало" /><br />
-
+    <div class="container">
+        <div class="buttons">
+            <button id="firstBtn">Выбрать первый элемент</button>
+            <button id="lastBtn">Выбрать последний элемент</button>
+            <button id="nextBtn">Выбрать следующий элемент</button>
+            <button id="prevBtn">Выбрать предыдущий элемент</button>
+            <button id="addEndBtn">Добавить элемент в конец</button>
+            <button id="deleteStartBtn">Удалить элемент с начала</button>
+            <button id="deleteEndBtn">Удалить элемент с конца</button>
+            <button id="deleteMidBtn">Удалить элемент с середины</button>
+            <button id="addStartBtn">Добавить в начало</button>
+        </div>
+        <ul id="list">
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+        </ul>
+    </div>
     <script src="008_DOM.js"></script>
 </body>
-
 </html>
