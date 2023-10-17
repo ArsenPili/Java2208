@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MyString Class</title>
+</head>
+<body>
+    <script>
+        class MyString {
+            reverse(inputString) {
+                return inputString.split('').reverse().join('');
+            }
+
+            ucFirst(inputString) {
+                return inputString.charAt(0).toUpperCase() + inputString.slice(1);
+            }
+
+            ucWords(inputString) {
+                const words = inputString.split(' ');
+                for (let i = 0; i < words.length; i++) {
+                    words[i] = this.ucFirst(words[i]);
+                }
+                return words.join(' ');
+            }
+        }
+
+        const myStr = new MyString();
+        const originalString = "цей текст рядок";
+
+        const reversedString = myStr.reverse(originalString);
+        console.log("Реверс рядка: " + reversedString);
+
+        const ucFirstString = myStr.ucFirst(originalString);
+        console.log("Перша літера великою: " + ucFirstString);
+
+        const ucWordsString = myStr.ucWords(originalString);
+        console.log("Перша літера кожного слова великою: " + ucWordsString);
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Classes</title>
+</head>
+<body>
+    <script>
+        class Animal {
+            constructor(food, location) {
+                this.food = food;
+                this.location = location;
+            }
+
+            makeNoise() {
+                console.log("Така тварина спить");
+            }
+
+            eat() {
+                console.log(`Тварина їсть ${this.food}`);
+            }
+
+            sleep() {
+                console.log("Тварина спить");
+            }
+        }
+
+        class Dog extends Animal {
+            constructor(food, location, breed) {
+                super(food, location);
+                this.breed = breed;
+            }
+
+            makeNoise() {
+                console.log("Собака гавкає");
+            }
+        }
+
+        class Cat extends Animal {
+            constructor(food, location, color) {
+                super(food, location);
+                this.color = color;
+            }
+
+            makeNoise() {
+                console.log("Кіт муркоче");
+            }
+        }
+
+        class Horse extends Animal {
+            constructor(food, location, breed) {
+                super(food, location);
+                this.breed = breed;
+            }
+
+            makeNoise() {
+                console.log("Кінь фрррр");
+            }
+        }
+
+        class Veterinarian {
+            treatAnimal(animal) {
+                console.log(`Тварина їсть: ${animal.food}`);
+                console.log(`Місце знаходження тварини: ${animal.location}`);
+            }
+        }
+
+        const animals = [
+            new Dog("кістки", "двір", "Доберман"),
+            new Cat("мишей", "домівка", "сіробілий"),
+            new Horse("сіно", "стайня", "Арабський")
+        ];
+
+        const veterinarian = new Veterinarian();
+
+
+        for (let animal of animals) {
+            console.log("Обробка тварини:");
+            veterinarian.treatAnimal(animal);
+            animal.eat();
+            animal.makeNoise();
+            console.log("----------------");
+        }
+    </script>
+</body>
+</html>
